@@ -10,7 +10,7 @@ function App() {
     <Router>
         <div className="App">
           <header className="App-header">
-              <h1>A quick Fibonacci calculator using micro-services architectures</h1>
+              <h1>A quick Fibonacci calculator using Kubernetes</h1>
             <Link to="/">Home</Link>
             <Link to="/otherPage">Other Page</Link>
           </header>
