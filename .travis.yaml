@@ -18,7 +18,7 @@ before_install:
     - docker build -t tangolf88/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-    - docker run -e CI=true tangolf88/react-test npm run test
+    - docker run -e CI=true TanGolf/react-test npm run test
 
 deploy:
     provider: script
