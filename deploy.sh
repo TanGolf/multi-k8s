@@ -3,12 +3,12 @@ docker build -t tangolf/multi-server:latest -t tangolf88/multi-server:$SHA -f ./
 docker build -t tangolf/multi-worker:latest -t tangolf88/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push tangolf88/multi-client:latest
-docker push tangolf88/multi-client:latest
 docker push tangolf88/multi-server:latest
+docker push tangolf88/multi-worker:latest
 
 docker push tangolf88/multi-server:$SHA
 docker push tangolf88/multi-worker:$SHA
-docker push tangolf88/multi-worker:$SHA
+docker push tangolf88/multi-client:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=tangolf88/multi-server:$SHA
